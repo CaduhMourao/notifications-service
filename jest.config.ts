@@ -1,4 +1,4 @@
-export default {
+export default{
     "moduleFileExtensions": [
         "js",
         "json",
@@ -13,5 +13,5 @@ export default {
         "**/*.(t|j)s"
       ],
       "coverageDirectory": "../coverage",
-      "testEnvironment": "node"
+      "testEnvironment": "node",
 }
