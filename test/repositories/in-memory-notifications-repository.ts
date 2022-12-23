@@ -19,16 +19,16 @@ export class InMemoryNotificationsRepository
     return notification;
   }
 
-  async countManyByRecipientId(recipientId: string): Promise<number> {
-    return this.notifications.filter(
-      notification => notification.recipientId === recipientId
-      ).length;
-  }
-
   async findManyByRecipientId(recipientId: string): Promise<Notification[]> {
     return this.notifications.filter(
-      (item) => item.recipientId === recipientId,
+      (notification) => notification.recipientId === recipientId,
     );
+  }
+
+  async countManyByRecipientId(recipientId: string): Promise<number> {
+    return this.notifications.filter(
+      (notification) => notification.recipientId === recipientId
+      ).length;
   }
 
   async create(notification: Notification) {
