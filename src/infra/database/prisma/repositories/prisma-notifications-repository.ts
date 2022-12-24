@@ -52,7 +52,7 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
     }
 
     async save(notification: Notification): Promise<void> {
-        const raw = PrismaNotificationMapper.toPrchemy(notification)
+        const raw = PrismaNotificationMapper.toPrisma(notification)
 
         await this.prisma.notification.update({
             where: {
